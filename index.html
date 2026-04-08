@@ -7,99 +7,174 @@
 
 <style>
 body {
-    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
 }
 
-.header {
-    background: #111827;
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
     color: white;
-    padding: 30px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-.header h1 {
+.hero h1 {
+    font-size: 38px;
     margin: 0;
-    font-size: 32px;
 }
 
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.btn-main {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 14px 25px;
+    background: #22c55e;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTAINER */
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     padding: 30px;
 }
 
-.card {
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.feature {
     background: white;
     padding: 20px;
-    margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* PRODUCT */
+.products {
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .card h2 {
     margin-top: 0;
 }
 
-.btn {
+.btn-download {
     display: inline-block;
-    padding: 12px 20px;
+    margin-top: 10px;
+    padding: 12px 18px;
     background: #2563eb;
     color: white;
-    text-decoration: none;
     border-radius: 6px;
-    margin-top: 10px;
+    text-decoration: none;
 }
 
-.btn:hover {
-    background: #1e40af;
+/* WHATSAPP */
+.wa {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
 }
 
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 20px;
-    font-size: 12px;
     color: #777;
+    font-size: 13px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
+<!-- HERO -->
+<div class="hero">
     <h1>iPos Password Recovery</h1>
-    <p>Solusi cepat untuk membuka password aplikasi iPos</p>
+    <p>Solusi cepat & aman membuka password iPos</p>
+    <a href="#download" class="btn-main">Download Sekarang</a>
 </div>
 
+<!-- CONTENT -->
 <div class="container">
 
-    <div class="card">
-        <h2>iPos 4</h2>
-        <p>Reset password untuk iPos versi 4 dengan cepat dan aman.</p>
-        <a class="btn" href="Password Recovery iPos 4.exe">Download</a>
+    <!-- FEATURES -->
+    <div class="features">
+        <div class="feature">
+            <h3>⚡ Cepat</h3>
+            <p>Proses hanya hitungan detik</p>
+        </div>
+        <div class="feature">
+            <h3>🔒 Aman</h3>
+            <p>Tidak merusak database</p>
+        </div>
+        <div class="feature">
+            <h3>💻 Mudah</h3>
+            <p>Tidak perlu skill teknis</p>
+        </div>
     </div>
 
-    <div class="card">
-        <h2>iPos 5</h2>
-        <p>Support versi terbaru iPos 5, mudah digunakan.</p>
-        <a class="btn" href="Password Recovery iPos 5.exe">Download</a>
-    </div>
+    <!-- PRODUCTS -->
+    <div class="products" id="download">
 
-    <div class="card">
-        <h2>Resto v3</h2>
-        <p>Khusus untuk aplikasi restoran iPos.</p>
-        <a class="btn" href="Password Recovery Resto v3.exe">Download</a>
-    </div>
+        <div class="card">
+            <h2>iPos 4</h2>
+            <p>Support semua database iPos 4</p>
+            <a class="btn-download" href="Password Recovery iPos 4.exe">Download</a>
+        </div>
 
-    <div class="card">
-        <h2>Apotek Klinik</h2>
-        <p>Versi khusus untuk sistem apotek & klinik.</p>
-        <a class="btn" href="Password Recovery Apotek Klinik v4.exe">Download</a>
+        <div class="card">
+            <h2>iPos 5</h2>
+            <p>Versi terbaru & stabil</p>
+            <a class="btn-download" href="Password Recovery iPos 5.exe">Download</a>
+        </div>
+
+        <div class="card">
+            <h2>Resto v3</h2>
+            <p>Khusus restoran iPos</p>
+            <a class="btn-download" href="Password Recovery Resto v3.exe">Download</a>
+        </div>
+
+        <div class="card">
+            <h2>Apotek Klinik</h2>
+            <p>Support sistem apotek & klinik</p>
+            <a class="btn-download" href="Password Recovery Apotek Klinik v4.exe">Download</a>
+        </div>
+
     </div>
 
 </div>
 
+<!-- WHATSAPP -->
+<a class="wa" href="https://wa.me/6285155313599">💬</a>
+
+<!-- FOOTER -->
 <div class="footer">
     © 2026 iPos Password Recovery | All Rights Reserved
 </div>
