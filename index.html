@@ -1,116 +1,149 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iPos Password Recovery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPos Password Recovery</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f6f9;
+        }
 
-/* HERO */
-.hero {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-.hero h1 {
-    font-size: 38px;
-    margin: 0;
-}
+        .hero h1 {
+            font-size: 38px;
+            margin: 0;
+        }
 
-.hero p {
-    margin-top: 10px;
-    font-size: 18px;
-}
+        .hero p {
+            margin-top: 10px;
+            font-size: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
 
-.btn-main {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 14px 25px;
-    background: #22c55e;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
+        .btn-main {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 14px 25px;
+            background: #22c55e;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-/* CONTAINER */
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px;
-}
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 30px;
+        }
 
-/* FEATURES */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
-}
+        /* FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-.feature {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
+        .feature {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
 
-/* PRODUCT */
-.products {
-    margin-top: 30px;
-}
+        /* PRODUCT CARDS */
+        .products {
+            margin-top: 30px;
+        }
 
-.card {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
 
-.card h2 {
-    margin-top: 0;
-}
+        .card h2 {
+            margin-top: 0;
+            color: #1e3a8a;
+        }
 
-.btn-download {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 18px;
-    background: #2563eb;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-}
+        /* DOWNLOAD BUTTONS GROUP */
+        .download-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
 
-/* WHATSAPP */
-.wa {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 20px;
-}
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
 
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: #777;
-    font-size: 13px;
-}
-</style>
+        .btn-download:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Warna Khusus Windows 7 */
+        .win7 {
+            background-color: #3b82f6;
+        }
+
+        /* Warna Khusus Windows 10/11 */
+        .win10 {
+            background-color: #1f2937;
+        }
+
+        /* WHATSAPP */
+        .wa {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+            font-size: 13px;
+        }
+    </style>
 </head>
 
 <body>
@@ -119,7 +152,7 @@ body {
 <div class="hero">
     <h1>iPos Password Recovery</h1>
     <p>Solusi cepat & aman membuka password iPos</p>
-    <p>Dengan menggunakan aplikasi ini, Anda secara sadar menyatakan bahwa Anda adalah pemilik sah atau memiliki izin resmi untuk mengakses dan melakukan reset password pada database yang Anda pilih. Pengembang tidak bertanggung jawab atas segala bentuk penyalahgunaan, akses ilegal, kerusakan sistem, kehilangan data, maupun konsekuensi hukum yang timbul akibat dari penggunaan aplikasi ini. </p>
+    <p style="font-size: 13px; opacity: 0.8;">Disclaimer: Dengan menggunakan aplikasi ini, Anda menyatakan bahwa Anda adalah pemilik sah. Pengembang tidak bertanggung jawab atas segala bentuk penyalahgunaan atau konsekuensi hukum yang timbul.</p>
     <a href="#download" class="btn-main">Download Sekarang</a>
 </div>
 
@@ -145,28 +178,44 @@ body {
     <!-- PRODUCTS -->
     <div class="products" id="download">
 
+        <!-- iPos 4 -->
         <div class="card">
             <h2>Password Recovery iPos 4</h2>
             <p>Untuk mereset password login admin aplikasi iPos 4 dan iPos 4FE</p>
-            <a class="btn-download" href="Password Recovery iPos 4.exe">Download</a>
+            <div class="download-group">
+                <a href="For Windows 7 - Password Recovery iPos 4.zip" class="btn-download win7"><i class="fab fa-windows"></i> Untuk Windows 7</a>
+                <a href="For W10 W11 - Password Recovery iPos 4.zip" class="btn-download win10"><i class="fab fa-windows"></i> Untuk Windows 10/11</a>
+            </div>
         </div>
 
+        <!-- iPos 5 -->
         <div class="card">
-            <h2>Password Recovery iPos 5 (Standar, Professional, Ultimate)</h2>
-            <p>Untuk mereset password login admin aplikasi Program Toko iPos 5 semua edisi</p>
-            <a class="btn-download" href="Password Recovery iPos 5.exe">Download</a>
+            <h2>Password Recovery iPos 5</h2>
+            <p>Mendukung edisi Standar, Professional, dan Ultimate.</p>
+            <div class="download-group">
+                <a href="For Windows 7 - Password Recovery iPos 5.zip" class="btn-download win7"><i class="fab fa-windows"></i> Untuk Windows 7</a>
+                <a href="For W10 W11 - Password Recovery iPos 5.zip" class="btn-download win10"><i class="fab fa-windows"></i> Untuk Windows 10/11</a>
+            </div>
         </div>
 
+        <!-- Resto v3 -->
         <div class="card">
             <h2>Password Recovery Resto v3</h2>
             <p>Untuk mereset password login admin aplikasi Resto v3</p>
-            <a class="btn-download" href="Password Recovery Resto v3.exe">Download</a>
+            <div class="download-group">
+                <a href="For Windows 7 - Password Recovery Resto v3.zip" class="btn-download win7"><i class="fab fa-windows"></i> Untuk Windows 7</a>
+                <a href="For W10 W11 - Password Recovery Resto v3.zip" class="btn-download win10"><i class="fab fa-windows"></i> Untuk Windows 10/11</a>
+            </div>
         </div>
 
+        <!-- Apotek Klinik v4 -->
         <div class="card">
             <h2>Password Recovery Apotek Klinik v4</h2>
             <p>Untuk mereset password login admin aplikasi Apotek & Klinik v4</p>
-            <a class="btn-download" href="Password Recovery Apotek Klinik v4.exe">Download</a>
+            <div class="download-group">
+                <a href="For Windows 7 - Password Recovery Apotek Klinik v4.zip" class="btn-download win7"><i class="fab fa-windows"></i> Untuk Windows 7</a>
+                <a href="For W10 W11 - Password Recovery Apotek Klinik v4.zip" class="btn-download win10"><i class="fab fa-windows"></i> Untuk Windows 10/11</a>
+            </div>
         </div>
 
     </div>
