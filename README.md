@@ -13,7 +13,7 @@ Jika berhasil direset, maka password login user admin akan kembali menjadi defau
 
 Tersedia versi w7 & W10/W11
 
-Password extract zip: 2088
+---> Password extract zip: 2088 <---
 
 Tersedia juga koneksi VPN untuk menghubungkan komputer iPos yang berbeda lokasi
 https://ipos5vpn.my.id
